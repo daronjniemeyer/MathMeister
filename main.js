@@ -54,6 +54,7 @@ function startQuiz() {
 // Moves to the next question
 function nextQuestion() {
     if (questionCount < numQuestions) {
+        clearInterval(countdown); // Clear any existing timer
         correctAnswer = generateExercise(); // Generate new exercise
         startTimer(); // Start the countdown timer
     } else {
@@ -96,6 +97,7 @@ function generateExercise() {
 }
 
 // Handles the user's answer submission
+// Handles the user's answer submission
 function submitAnswer() {
     const userAnswer = parseInt(document.getElementById('InputField').value);
     
@@ -112,6 +114,10 @@ function submitAnswer() {
     questionCount++; // Increment question count
     updateScore(); // Update score display
     document.getElementById('InputField').value = ''; // Clear input
+    
+    // Reset timeLeft to its initial value based on difficulty
+    getTimeAndRangeByDifficulty(); // This will reset timeLeft
+
     nextQuestion(); // Load next question
 }
 
