@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMeister | Daron J. Niemeyer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <audio id="correctSound" src="./src/tada.mp3"></audio>
+        <audio id="incorrectSound" src="./src/error.mp3"></audio>
+        <h1>Welcome to MathMeister!</h1>
+        <p>
+            Are you ready to challenge your mental math skills?<br>MathMeister generates random exercises designed to push your mind to the limit. Solve each question before the timer runs out!
+        </p>
+        
+        <div class="settings-icon" onclick="toggleSettings()">⚙️</div>
+        
+        <label>Start Quiz:</label>
+        <input type="button" id="StartBtn" value="Start Quiz" class="button">
+        
+        <div class="exercise">
+            <label>Exercise:</label>
+            <span id="ExField">Click "Start Quiz" to begin!</span>
+        </div>
+        
+        <div class="timer">
+            <label>Time Left:</label> 
+            <span id="timer">-</span> seconds
+        </div>
+        
+        <label>Answer:</label>
+        <input type="text" id="InputField" class="input">
+        <input type="button" id="SubmitBtn" value="Submit" class="button">
+        
+        <div class="score">
+            <label>Score:</label>
+            <span id="score">0</span>
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settingsPanel">
+        <h2>Settings</h2>
+        <div>
+            <label>Difficulty:</label>
+            <div>
+                <input type="radio" name="difficulty" value="Easy" checked> Easy (10s, 1-10)
+                <br>
+                <input type="radio" name="difficulty" value="Medium"> Medium (7s, 1-20)
+                <br>
+                <input type="radio" name="difficulty" value="Hard"> Hard (5s, 1-50)
+                <br>
+                <input type="radio" name="difficulty" value="Nightmare"> Nightmare (3s, 1-100)
+                <br>
+                <input type="radio" name="difficulty" value="Custom"> Custom
+            </div>
+            <div id="customOptions" class="hidden">
+                <label>Custom Time:</label>
+                <input type="number" id="customTime" min="1" placeholder="Time in seconds">
+                <label>Range:</label>
+                <input type="number" id="customRange" min="1" placeholder="Max range">
+            </div>
+        </div>
+        <div>
+            <label>Number of Questions:</label>
+            <input type="number" id="numQuestions" min="1" placeholder="5">
+        </div>
+    </div>
+
+    <script src="main.js"></script> 
+</body>
+</html>

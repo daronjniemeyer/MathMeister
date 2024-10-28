@@ -1,0 +1,144 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1f1f, #333);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #76c7c0;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.exercise, .timer, .score {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+label {
+    font-weight: bold;
+    color: #76c7c0;
+}
+
+#ExField, #timer, #score {
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+.input {
+    padding: 10px;
+    width: calc(100% - 24px);
+    border: 1px solid #76c7c0;
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #222;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    text-align: center;
+}
+
+.button {
+    padding: 12px 24px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #76c7c0;
+    color: #2a2a2a;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background: #64b3ac;
+    box-shadow: 0px 4px 12px rgba(118, 199, 192, 0.6);
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.settings-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #76c7c0;
+}
+
+.settings-panel {
+    position: fixed;
+    top: 20%;
+    right: -300px;
+    width: 250px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+    color: #e0e0e0;
+}
+
+.settings-panel.open {
+    right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Customize radio buttons */
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #007BFF;
+    border-color: #0056b3;
+}
+
+input[type="radio"]:hover {
+    border-color: #0056b3;
+}
+
+.radio-group label {
+    font-weight: bold;
+    cursor: pointer;
+}
