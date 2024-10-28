@@ -14,7 +14,7 @@ MathMeister provides a user-friendly interface for taking math quizzes, making l
 
 ## Access the Tool
 
-You can access MathMeister directly at [daronjniemeyer.github.io/mathmeister](https://daronjniemeyer.github.io/mathmeister).
+You can access MathMeister directly at [daronjniemeyer.github.io/MathMeister](https://daronjniemeyer.github.io/MathMeister).
 
 ## Feedback and Contributions
 
